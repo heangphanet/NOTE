@@ -1,0 +1,186 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-weight: normal;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title, content, createdAt alignment in grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+    .grid-container div {
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+
+        .grid-container div:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+/* Action buttons (Add, Edit, Delete) */
+button {
+    background-color: hsla(160, 100%, 37%, 1);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: hsla(160, 100%, 37%, 0.8);
+    }
+
+    button:active {
+        background-color: hsla(160, 100%, 37%, 0.6);
+    }
+
+    /* Smaller button for the floating add note button */
+    button.floating-add {
+        background-color: hsla(160, 100%, 37%, 1);
+        color: white;
+        padding: 0.5rem;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        font-size: 1.25rem;
+        transition: all 0.3s ease;
+    }
+
+        button.floating-add:hover {
+            background-color: hsla(160, 100%, 37%, 0.8);
+        }
+
+        button.floating-add:active {
+            background-color: hsla(160, 100%, 37%, 0.6);
+        }
+
+/* Input Fields */
+input,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.6rem 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+    input:focus,
+    textarea:focus {
+        border-color: hsla(160, 100%, 37%, 1);
+        outline: none;
+    }
+
+/* Action button layout for Add, Edit, View, Delete */
+.actions {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: flex-start;
+}
+
+    .actions button {
+        font-size: 0.875rem;
+        padding: 0.4rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .actions .edit {
+        background-color: #f59e0b;
+        color: white;
+    }
+
+        .actions .edit:hover {
+            background-color: #d97706;
+        }
+
+    .actions .delete {
+        background-color: #ef4444;
+        color: white;
+    }
+
+        .actions .delete:hover {
+            background-color: #dc2626;
+        }
+
+    .actions .view {
+        background-color: #10b981;
+        color: white;
+    }
+
+        .actions .view:hover {
+            background-color: #059669;
+        }
+
+/* Add row for new note */
+.new-note-row {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+    .new-note-row .input-field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+        .new-note-row .input-field label {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .new-note-row .input-field input,
+        .new-note-row .input-field textarea {
+            margin-top: 0.5rem;
+        }
+
+    .new-note-row .buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .new-note-row {
+        padding: 1rem;
+    }
+}

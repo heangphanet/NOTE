@@ -1,0 +1,6 @@
+@NOTE.APP.Server_HostAddress = http://localhost:5118
+
+GET {{NOTE.APP.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
