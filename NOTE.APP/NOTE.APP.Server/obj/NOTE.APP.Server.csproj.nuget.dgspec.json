@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\NOTEPJ\\NOTE.APP\\NOTE.APP.Server\\NOTE.APP.Server.csproj": {}
+    "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\NOTE.APP.Server.csproj": {}
   },
   "projects": {
-    "E:\\NOTEPJ\\NOTE.APP\\NOTE.APP.Server\\NOTE.APP.Server.csproj": {
+    "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\NOTE.APP.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NOTEPJ\\NOTE.APP\\NOTE.APP.Server\\NOTE.APP.Server.csproj",
+        "projectUniqueName": "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\NOTE.APP.Server.csproj",
         "projectName": "NOTE.APP.Server",
-        "projectPath": "E:\\NOTEPJ\\NOTE.APP\\NOTE.APP.Server\\NOTE.APP.Server.csproj",
+        "projectPath": "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\NOTE.APP.Server.csproj",
         "packagesPath": "C:\\Users\\LEC\\.nuget\\packages\\",
-        "outputPath": "E:\\NOTEPJ\\NOTE.APP\\NOTE.APP.Server\\obj\\",
+        "outputPath": "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",

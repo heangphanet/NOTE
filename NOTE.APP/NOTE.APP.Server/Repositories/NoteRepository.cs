@@ -1,7 +1,7 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
-using NOTEAPI.Model;
 using NOTE.APP.Server.Repositories;
+using NOTEAPI.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -9,12 +9,12 @@ public class NoteRepository : INoteRepository
 {
     private readonly string _connectionString;
 
-    public NoteRepository(IConfiguration config)
+    // Constructor now takes a connection string from DI
+    public NoteRepository(string connectionString)
     {
-        _connectionString = config.GetConnectionString("DefaultConnection");
+        _connectionString = connectionString;
     }
 
-    // Get all notes by userId
     public async Task<IEnumerable<Note>> GetNotesByUserIdAsync(int userId)
     {
         using var connection = new SqlConnection(_connectionString);
@@ -24,7 +24,7 @@ public class NoteRepository : INoteRepository
         );
     }
 
-    public async Task<Note> GetNoteByIdAsync( int userId, int noteId)
+    public async Task<Note> GetNoteByIdAsync(int userId, int noteId)
     {
         using var connection = new SqlConnection(_connectionString);
         return await connection.QuerySingleOrDefaultAsync<Note>(

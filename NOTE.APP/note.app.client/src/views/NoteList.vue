@@ -3,50 +3,50 @@
     <div class="flex items-center justify-between mb-6">
       <h1 class="text-3xl font-bold text-gray-800">My Notes</h1>
     </div>
-
-    <div class="flex items-center mb-6 gap-4">
-      <input v-model="searchQuery" type="text" placeholder="Search notes..." class="border rounded-lg px-4 py-2 w-1/2" />
-
-      <select v-model="sortOption" class="border rounded-lg px-4 py-2">
-        <option value="createdAtDesc">Sort by Newest</option>
-        <option value="createdAtAsc">Sort by Oldest</option>
-        <option value="titleAsc">Sort by Title (A-Z)</option>
-        <option value="titleDesc">Sort by Title (Z-A)</option>
-      </select>
+    <div class="flex items-center mb-6">
+      <div class="w-1/3">
+        <input v-model="searchQuery" type="text" placeholder="Search notes..."
+               class="border rounded-lg px-4 py-2 w-full" />
+      </div>
     </div>
-
-    <div class="flex gap-4 mb-6">
+    <div class="flex items-center justify-start gap-4" style="margin-bottom: 15px;">
       <button @click="openCreateModal"
-              class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition-all"
-              v-if="selectedNote === null && !isCreatingNewNote">
+              class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition-all">
         Add Note
       </button>
 
-      <button @click="openEditModal(selectedNote)"
-              class="bg-yellow-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-yellow-700 flex items-center gap-2 transition-all"
-              v-if="selectedNote">
+      <button @click="openEditModal(selectedNote)" :disabled="!selectedNote"
+              class="bg-yellow-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-yellow-700 transition-all disabled:opacity-50">
         Edit Note
       </button>
 
-      <button @click="deleteNote(selectedNote.id, selectedNote.userId)"
-              class="bg-red-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-red-700 flex items-center gap-2 transition-all"
-              v-if="selectedNote">
+      <button @click="deleteNote(selectedNote?.id, selectedNote?.userId)" :disabled="!selectedNote"
+              class="bg-red-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-red-700 transition-all disabled:opacity-50">
         Delete Note
       </button>
 
-      <button @click="openDetailModal(selectedNote)"
-              class="bg-yellow-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-yellow-700 flex items-center gap-2 transition-all"
-              v-if="selectedNote">
+      <button @click="openDetailModal(selectedNote)" :disabled="!selectedNote"
+              class="bg-yellow-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-yellow-700 transition-all disabled:opacity-50">
         View Note
       </button>
-      <button @click="cancelSelection"
-              class="bg-gray-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-600 flex items-center gap-2 transition-all"
-              v-if="selectedNote">
+
+      <button @click="cancelSelection" :disabled="!selectedNote"
+              class="bg-gray-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-600 transition-all disabled:opacity-50">
         Cancel
       </button>
-    </div>
 
-    <div v-if="filteredAndSortedNotes.length > 0" class="overflow-x-auto">
+    </div>
+    <div v-if="filteredAndSortedNotes.length > 0" class="overflow-x-auto mt-6">
+      <div class="absolute top-0 right-0 w-48">
+        <select v-model="sortOption" class="border rounded-lg px-4 py-2 w-full">
+          <option value="createdAtDesc">Sort by Newest</option>
+          <option value="createdAtAsc">Sort by Oldest</option>
+          <option value="titleAsc">Sort by Title (A-Z)</option>
+          <option value="titleDesc">Sort by Title (Z-A)</option>
+        </select>
+        <div>_____________</div>
+      </div>
+
       <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg">
         <thead>
           <tr class="bg-gray-100">
@@ -67,6 +67,7 @@
         </tbody>
       </table>
     </div>
+
     <div v-else class="text-center text-gray-500 py-12">No notes found. Click "Add Note" to create one.</div>
 
     <div v-if="isCreatingNewNote" class="bg-white p-4 rounded-xl shadow-lg mt-6">
@@ -118,8 +119,8 @@
   const noteStore = useNoteStore();
   const userId = ref(1)
 
-  const searchQuery = ref('') 
-  const sortOption = ref('createdAtDesc') 
+  const searchQuery = ref('')
+  const sortOption = ref('createdAtDesc')
 
   const filteredAndSortedNotes = computed(() => {
     let filteredNotes = notes.value.filter(note =>
@@ -164,7 +165,7 @@
 
   const openCreateModal = () => {
     isCreatingNewNote.value = true;
-    newNote.value = { title: "", content: "" }; 
+    newNote.value = { title: "", content: "" };
   };
 
   const openEditModal = (note: Note | null) => {
@@ -178,13 +179,13 @@
   const openDetailModal = (note: Note | null) => {
     if (note) {
       selectedNote.value = note;
-      noteStore.getNote(note.userId, note.id);   
+      noteStore.getNote(note.userId, note.id);
       router.push(`/notes/Detail/${note.userId}/${note.id}`);
     }
   };
 
   function cancelSelection() {
-    selectedNote.value = null;  
+    selectedNote.value = null;
   }
 
   async function saveNewNote() {
@@ -198,7 +199,7 @@
     try {
       await noteStore.createNote(newNote.value);
       console.log("Note saved successfully!");
-      isCreatingNewNote.value = false; 
+      isCreatingNewNote.value = false;
     } catch (error) {
       console.error("Error saving note:", error);
       alert("Failed to save note. Check console for details.");
@@ -218,7 +219,7 @@
   }
 
   function cancelCreateModal() {
-    isCreatingNewNote.value = false; 
+    isCreatingNewNote.value = false;
   }
 
   onMounted(fetchNotes);

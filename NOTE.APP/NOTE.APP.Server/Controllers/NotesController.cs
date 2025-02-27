@@ -6,9 +6,9 @@ using NOTE.APP.Server.Repositories;
 [ApiController]
 public class NotesController : ControllerBase
 {
-    private readonly NoteRepository _repository;
+    private readonly INoteRepository _repository;
 
-    public NotesController(NoteRepository repository)
+    public NotesController(INoteRepository repository)
     {
         _repository = repository;
     }

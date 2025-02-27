@@ -1,10 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\NOTEPJ\\NOTE.APP\\",
+  "WorkspaceRootPath": "E:\\NOTE\\NOTE.APP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{648F7C01-C8B8-4CEB-BEFC-F373334B9036}|NOTE.APP.Server\\NOTE.APP.Server.csproj|e:\\notepj\\note.app\\note.app.server\\repositories\\noterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D7C77481-F326-4A71-96BF-D29FF20C209A}|note.app.client\\note.app.client.esproj|e:\\note\\note.app\\note.app.client\\src\\views\\notelist.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7C77481-F326-4A71-96BF-D29FF20C209A}|note.app.client\\note.app.client.esproj|solutionrelative:note.app.client\\src\\views\\notelist.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{648F7C01-C8B8-4CEB-BEFC-F373334B9036}|NOTE.APP.Server\\NOTE.APP.Server.csproj|e:\\note\\note.app\\note.app.server\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{648F7C01-C8B8-4CEB-BEFC-F373334B9036}|NOTE.APP.Server\\NOTE.APP.Server.csproj|solutionrelative:note.app.server\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{648F7C01-C8B8-4CEB-BEFC-F373334B9036}|NOTE.APP.Server\\NOTE.APP.Server.csproj|e:\\note\\note.app\\note.app.server\\repositories\\noterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{648F7C01-C8B8-4CEB-BEFC-F373334B9036}|NOTE.APP.Server\\NOTE.APP.Server.csproj|solutionrelative:note.app.server\\repositories\\noterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{648F7C01-C8B8-4CEB-BEFC-F373334B9036}|NOTE.APP.Server\\NOTE.APP.Server.csproj|e:\\note\\note.app\\note.app.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{648F7C01-C8B8-4CEB-BEFC-F373334B9036}|NOTE.APP.Server\\NOTE.APP.Server.csproj|solutionrelative:note.app.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{648F7C01-C8B8-4CEB-BEFC-F373334B9036}|NOTE.APP.Server\\NOTE.APP.Server.csproj|e:\\note\\note.app\\note.app.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{648F7C01-C8B8-4CEB-BEFC-F373334B9036}|NOTE.APP.Server\\NOTE.APP.Server.csproj|solutionrelative:note.app.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,12 +75,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NoteList.vue",
+              "DocumentMoniker": "E:\\NOTE\\NOTE.APP\\note.app.client\\src\\views\\NoteList.vue",
+              "RelativeDocumentMoniker": "note.app.client\\src\\views\\NoteList.vue",
+              "ToolTip": "E:\\NOTE\\NOTE.APP\\note.app.client\\src\\views\\NoteList.vue",
+              "RelativeToolTip": "note.app.client\\src\\views\\NoteList.vue",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
+              "WhenOpened": "2025-02-27T02:30:38.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotesController.cs",
+              "DocumentMoniker": "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\Controllers\\NotesController.cs",
+              "RelativeDocumentMoniker": "NOTE.APP.Server\\Controllers\\NotesController.cs",
+              "ToolTip": "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\Controllers\\NotesController.cs",
+              "RelativeToolTip": "NOTE.APP.Server\\Controllers\\NotesController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T02:10:57.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "NOTE.APP.Server\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\Properties\\launchSettings.json",
+              "RelativeToolTip": "NOTE.APP.Server\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-27T02:01:30.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\Program.cs",
+              "RelativeDocumentMoniker": "NOTE.APP.Server\\Program.cs",
+              "ToolTip": "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\Program.cs",
+              "RelativeToolTip": "NOTE.APP.Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T01:56:02.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "NoteRepository.cs",
-              "DocumentMoniker": "E:\\NOTEPJ\\NOTE.APP\\NOTE.APP.Server\\Repositories\\NoteRepository.cs",
+              "DocumentMoniker": "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\Repositories\\NoteRepository.cs",
               "RelativeDocumentMoniker": "NOTE.APP.Server\\Repositories\\NoteRepository.cs",
-              "ToolTip": "E:\\NOTEPJ\\NOTE.APP\\NOTE.APP.Server\\Repositories\\NoteRepository.cs",
+              "ToolTip": "E:\\NOTE\\NOTE.APP\\NOTE.APP.Server\\Repositories\\NoteRepository.cs",
               "RelativeToolTip": "NOTE.APP.Server\\Repositories\\NoteRepository.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-26T09:45:44.534Z",
               "EditorCaption": ""
