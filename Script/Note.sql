@@ -1,8 +1,3 @@
-USE [NOTE]
-GO
-
-
-
 CREATE TABLE [dbo].[Notes](
 	[Id] [int] IDENTITY(1,1) NOT NULL Primary Key,
 	[UserID] [int] NOT NULL,
